@@ -1,0 +1,81 @@
+/* Importando fontes */
+@font-face {font-family: 'Gotham HTF Black';src: url(../fonts/gotham/GothamHTF-Black.otf);}
+@font-face {font-family: 'Gotham HTF Bold';src: url(../fonts/gotham/GothamHTF-Bold.otf);}
+@font-face {font-family: 'Gotham HTF Book';src: url(../fonts/gotham/GothamHTF-Book.otf);}
+@font-face {font-family: 'Gotham HTF Light';src: url(../fonts/gotham/GothamHTF-Light.otf);}
+@font-face {font-family: 'Gotham HTF Medium';src: url(../fonts/gotham/GothamHTF-Medium.otf);}
+@font-face {font-family: 'Gotham HTF Thin';src: url(../fonts/gotham/GothamHTF-Thin.otf);}
+@font-face {font-family: 'Gotham HTF Ultra';src: url(../fonts/gotham/GothamHTF-Ultra.otf);}
+@font-face {font-family: 'Gotham HTF XLight';src: url(../fonts/gotham/GothamHTF-XLight.otf);}
+@font-face {font-family: 'Roboto Black';src: url(../fonts/roboto/roboto-black.ttf);}
+@font-face {font-family: 'Roboto Black Italic';src: url(../fonts/roboto/roboto-blackItalic.ttf);}
+@font-face {font-family: 'Roboto Bold';src: url(../fonts/roboto/roboto-bold.ttf);}
+@font-face {font-family: 'Roboto Bold Italic';src: url(../fonts/roboto/roboto-boldItalic.ttf);}
+@font-face {font-family: 'Roboto Italic';src: url(../fonts/roboto/roboto-italic.ttf);}
+@font-face {font-family: 'Roboto Light';src: url(../fonts/roboto/roboto-light.ttf);}
+@font-face {font-family: 'Roboto Light Italic';src: url(../fonts/roboto/roboto-lightItalic.ttf);}
+@font-face {font-family: 'Roboto Medium';src: url(../fonts/roboto/roboto-medium.ttf);}
+@font-face {font-family: 'Roboto Medium Italic';src: url(../fonts/roboto/roboto-mediumItalic.ttf);}
+@font-face {font-family: 'Roboto Regular';src: url(../fonts/roboto/roboto-regular.ttf);}
+@font-face {font-family: 'Roboto Thin';src: url(../fonts/roboto/roboto-thin.ttf);}
+@font-face {font-family: 'Roboto Thin Italic';src: url(../fonts/roboto/roboto-thinItalic.ttf);}
+
+/* Padronizando todos os elementos */
+* {
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo variáveis da página */
+:root{
+
+    /* Definindo as cores utilizadas */
+    --magenta: #ED145B;
+    --chinese-black: #101010;
+    --black: #000000;
+    --pastel-blue: #ACC1CC;
+    --davys-green: #555555;
+    --cultured: #F5F5F5;
+    --spanish-blue: #006BB7;
+    --silver-foil: #AFAFAF;
+
+    /* Definindo as fontes utilizadas */
+    --title-btn-font: 'Gotham HTF Medium';
+    --section-list-font: 'Gotham HTF Book';
+    --accordion-title-font:'Gotham HTF Bold';
+    --caption-font: 'Roboto Regular';
+
+    /* Definindo o tamanho das fontes na versão de celular */
+    --title-size: 40px;
+    --subtitle-size: 36px;
+    --section-size: 18px;
+    --accordion-title-size: 24px;
+    --accordion-section-size: 16px;
+    --caption-size: 12px;
+    --btn-contact-size: 20px;
+    --btn-scroll-size: 12px;
+    --list-size: 18px;
+    --sublist-size: 16px;
+    
+}
+
+/* Aplicando mudanças para versão de computador */
+@media (min-width: 768px){
+
+    /* Modificando as variáveis para a versão de computador */
+    :root{
+
+        /* Definindo o tamanho das fontes na versão de computador */
+        --title-size: 80px;
+        --subtitle-size: 80px;
+        --section-size: 20px;
+        --accordion-title-size: 25px;
+        --accordion-section-size: 18px;
+        --caption-size: 16px;
+        --btn-contact-size: 30px;
+        --btn-scroll-size: 12px;
+        --list-size: 20px;
+        --sublist-size: 18px;
+    }
+}
