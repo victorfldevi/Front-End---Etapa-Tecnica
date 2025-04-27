@@ -1,14 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Importando arquivo de estilização style.css -->
     <link rel="stylesheet" href="../css/style.css">
-    
+
+    <!-- Importando bibliotecas CSS e JS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
     <title>Home</title>
 </head>
 <body>
+    <!-- Mostra o logotipo da FIAP, junto a um fundo preto e um medidor de rolagem-->
+    <nav>
+        <img src="../svg/logo.svg" alt="Imagem do logo da FIAP">
+    </nav>
+    <!--  -->
+    <header>
+        <h1>A MAIOR FACULDADE</h1>
+        <h1>DE TECNOLOGIA</h1>
+        <img src="../imgs/break-image.jpg" alt="Imagem de fundo de blocos pretos em cascata, com iluminação irradiante">
+    </header>
+    <section>
+        <p>Referência em tecnologia e inovação no Brasil, a FIAP é uma faculdade que prepara profissionais para o futuro, 
+            com um ensino prático, professores atuantes no mercado e desafios reais que conectam os alunos às grandes empresas.</p>
+    </section>
+    <section>
+        <h1>EDUCAÇÃO E TECH</h1>
+        <p>A FIAP é muito mais do que uma faculdade de tecnologia, é um verdadeiro ecossistema de inovação e aprendizado.
+             Conhecida por sua abordagem moderna e focada no mercado, a instituição é referência quando se trata de formar profissionais
+              capacitados para os desafios do futuro. Seja na graduação, pós-graduação ou cursos livres, a FIAP entrega um ensino que 
+              mistura teoria e prática, preparando os alunos para atuar em empresas de ponta ou até mesmo empreender</p>
+        <img src="../imgs/fiap-next.jpg" alt="Imagem de um cartão do evento FIAP NEXT">
+        <small>Figura 1 - Logotipo da FIAP NEXT</small>
+        <p>Com um corpo docente formado por profissionais atuantes no mercado, a FIAP não ensina apenas tecnologia, mas também negócios,
+             inovação e liderança. Seus cursos abrangem diversas áreas, incluindo:</p>
+        <ul>
+            <li>
+                <h4>/ Tecnologia e Desenvolvimento</h4>
+                <p> - Desenvolvimento de Software</p>
+                <p> - Inteligência Artificial</p>
+                <p> - Data</p>
+                <p> - Cibersegurança</p>
+                <h4>/ UX/UI, Marketing Digital</h4>
+                <h4>/ Metodologias e Gestão</h4>
+            </li>
+        </ul>
+        <p>Além disso, a instituição incentiva fortemente o uso dessas metodologias e outras abordagens inovadoras que fazem parte do dia 
+            a dia de grandes empresas.</p>
+        <button href="#"></button>
+    </section>
+    <section>
+        <img src="../imgs/break-image.jpg" alt="Imagem de separação">
+    </section>
+    <section>
+        <h1>NOSSA ESTRUTURA</h1>
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    CONEXÃO O MERCADO DE TRABALHO
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    A FIAP se destaca não apenas pelo seu ensino inovador, mas também pela forma como conecta seus alunos ao mercado de 
+                    trabalho. A instituição tem parcerias com algumas das maiores empresas de tecnologia do mundo, permitindo que seus 
+                    estudantes participem de desafios reais, hackathons e programas de mentoria. Dessa forma, além de adquirirem 
+                    conhecimento teórico e prático, os alunos têm a chance de desenvolver networking e garantir oportunidades de estágio e 
+                    emprego ainda durante o curso. A FIAP compreende que o aprendizado vai além da sala de aula, por isso incentiva 
+                    projetos interdisciplinares que desafiam a criatividade e a capacidade de resolução de problemas dos futuros 
+                    profissionais.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    APRENDIZADO IMERSIVO
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Outro diferencial da FIAP é a sua estrutura moderna, pensada para proporcionar uma experiência de aprendizado imersiva e
+                     dinâmica. Os laboratórios contam com equipamentos de ponta e softwares atualizados, permitindo que os alunos 
+                     experimentem na prática as tecnologias que usarão no mercado de trabalho. Além disso, os espaços colaborativos são 
+                     projetados para estimular o trabalho em equipe, um fator essencial para profissionais da área de tecnologia. O ambiente 
+                     acadêmico da FIAP reflete a realidade das grandes empresas do setor, preparando os alunos para os desafios que 
+                     enfrentarão ao longo de sua carreira.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  ENSINO PERSONALIZADO
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    A instituição também aposta na personalização de ensino. oferecendo cursos e trilhas de aprendizado que se adaptam aos 
+                    diferentes perfis de profissionais. Seja para quem deseja seguir carreira no desenvolvimento de software, na ciência de 
+                    dados, na segurança cibernética ou até mesmo no empreendedorismo digital, a FIAP possui um programa que atende às 
+                    necessidades do mercado e às aspirações dos estudantes. Além disso, os cursos são atualizados constantemente para 
+                    acompanhar as inovações tecnológicas, garantindo que os alunos sempre tenham acesso ao que há de mais recente no setor.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    INOVAÇÃO E TRANSFORMAÇÃO
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Por fim, a FIAP se destaca pelo seu compromisso com a inovação e a transformação digital. A faculdade não apenas ensina 
+                    tecnologia, mas a utiliza para melhorar a experiência de aprendizado, com plataformas interativas, inteligência 
+                    artificial aplicada no ensino e metodologias ativas que engajam os alunos. Seu foco é formar profissionais completos, 
+                    que não apenas dominam ferramentas e linguagens de programação, mas também sabem resolver problemas, inovar e liderar. 
+                    Seja para quem busca uma primeira formação ou para profissionais que desejam se atualizar. a FIAP se consolidou como 
+                    uma das melhores instituições do Brasil para quem quer construir uma carreira de sucesso na tecnologia.
+                  </div>
+                </div>
+              </div>
+          </div>
+          <h1>QUER SABER MAIS?</h1>
+          <button>ENTRE EM CONTATO</button>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>
