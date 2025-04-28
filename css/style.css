@@ -80,6 +80,10 @@
     }
 }
 
+main {
+    background-color: var(--black);
+}
+
 /* Torna a imagem fornecida em --bg-image o novo fundo do container */
 .background-img{
     position: relative;
@@ -413,4 +417,33 @@
     font-family: var(--title-btn-font);
     border: 3px solid var(--magenta);
     background-color: transparent;
+}
+
+/* Cria uma div para conter e ajustar o botão de retorno custom */
+.return-btn-div{
+    position: fixed;
+    bottom: 10vh;
+    right: 10vw;
+    z-index: 2;
+}
+
+/* Cria o efeito de borda circular no botão de retorno e remove a cor de fundo */
+.return-btn {
+    position: relative;
+    background-color: transparent;
+}
+
+.return-btn::after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -8px;
+    right: -14px;
+    border: 1px solid var(--magenta);
+    border-radius: 40px;
+    color: var(--magenta);
 }
