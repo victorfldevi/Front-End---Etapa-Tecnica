@@ -79,3 +79,98 @@
         --sublist-size: 18px;
     }
 }
+
+/* Torna a imagem fornecida em --bg-image o novo fundo do container */
+.background-img{
+    position: relative;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+/* Adiciona o efeito de degradê, do preto para o transparente, sobre o plano de fundo */
+.fade-effect{
+    position: relative;
+}
+
+.fade-effect::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, var(--black) 30%, transparent 100%);
+    z-index: 1;
+}
+
+/* Aplica a cor magenta no texto */
+.text-magenta{
+    color: var(--magenta);
+}
+
+/* Aplica a cor pastel-blue no texto */
+.text-pastel-blue{
+    color: var(--pastel-blue);
+}
+
+/* Torna o texto transparente e adiciona uma borda ao redor das letras da cor do --bd-color */
+.wireframe-text{
+    color: transparent;
+    -webkit-text-stroke: 1.2px var(--bd-color);
+    font-family: var(--fnt-family) !important;
+}
+
+/* Faz o elemento ficar numa posição fixa da tela */
+.sticky{
+    position: sticky;
+    top: 0;
+}
+
+/* Controla a nav da página */
+.navigation{
+    height: 11vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--chinese-black);
+}
+
+/* Faz as imagens da nav terem posição absoluta e ter 80px de largura */
+.navigation img{
+    position: absolute;
+    width: 80px;
+}
+
+/* Faz a progress-bar ter posição absoluta, seu tamanho ser 0.5% da altura da viewport e sua cor ser magenta */
+.progress-bar-custom{
+    height: 0.5vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background-color: var(--magenta) !important;
+}
+
+/* Controla a seção 1 da página */
+.section1{
+    width: 100%;
+    height: 44vh;
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Aplica nos headings 1 da página o tamanho e a fonte ideal, e joga sua posição na frente do degradê*/
+.section1 h1{
+    margin: 0;
+    padding: 0;
+    font-size: var(--subtitle-size);
+    font-family: var(--title-btn-font);
+    z-index: 2;
+}
