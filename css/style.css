@@ -102,7 +102,7 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, var(--black) 30%, transparent 100%);
-    z-index: 1;
+    z-index: 0;
 }
 
 /* Aplica a cor magenta no texto */
@@ -126,6 +126,7 @@
 .sticky{
     position: sticky;
     top: 0;
+    z-index: 2;
 }
 
 /* Controla a nav da página */
@@ -143,7 +144,7 @@
 /* Faz as imagens da nav terem posição absoluta e ter 80px de largura */
 .navigation img{
     position: absolute;
-    width: 80px;
+    width: 100px;
 }
 
 /* Faz a progress-bar ter posição absoluta, seu tamanho ser 0.5% da altura da viewport e sua cor ser magenta */
@@ -160,7 +161,7 @@
 .section1{
     width: 100%;
     height: 43vh;
-    padding-left: 6vw;
+    padding: 0 6vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -172,21 +173,99 @@
     padding: 0;
     font-size: var(--subtitle-size);
     font-family: var(--title-btn-font);
-    z-index: 2;
+    z-index: 0;
 }
 
+/* Controla a seção 2 da página */
 .section2{
-    height: 33vh;
-    padding: 6vw;
+    height: 30vh;
+    padding: 0 3vw 0 9vw;
     display: flex;
     align-items: center;
     background-color: var(--black);
 }
 
+/* Adiciona ajustes de cor, fonte e espaçamento para o parágrafos da seção 2 */
 .section2 p{
+    margin: 0;
     color: var(--pastel-blue);
     font-size: var(--section-size);
     font-family: 'Roboto Light';
     letter-spacing: 0.2vw;
     line-height: 3vh;
+}
+
+/* Controla a seção 3 da página */
+.section3{
+    height: 255vh;
+    padding: 0 2vw 0 9vw;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cultured);
+}
+
+/* Ajusta do heading 1 para ter a posição e fonte adequadas*/
+.section3 h1{
+    padding: 18vh 0 10vh;
+    font-size: var(--title-size);
+    font-family: var(--title-btn-font);
+}
+
+/* Aplica ao componente paragraph a cor, fonte, espaçamento de linha e posicionamento adequados */
+.section3 p{
+    padding-bottom: 4vh;
+    color: var(--davys-green);
+    font-size: var(--section-size);
+    font-family: var(--section-list-font);
+    line-height: 3.3vh;
+}
+
+/* Ajusta a imagem para possuir o tamanho ideal */
+.section3 img{
+    width: calc(100vmin - 18vw);
+}
+
+/* Aplica ao componente small a cor, fonte e posicionamento adequados */
+.section3 small{
+    padding: 2vh 0 8vh;
+    color: var(--davys-green);
+    font-size: var(--caption-size);
+    font-family: var(--caption-font);
+}
+
+/* Retira o efeito padrão das listas */
+.section3 ul{
+    list-style: none;
+}
+
+/* Adiciona um pequeno espaçamento ao paragraph das listas */
+.section3 li p{
+    padding: 1vh 0;
+}
+
+/* Adiciona efeito de barra ( / ) ao lado do elemento */
+.section3 .slash::after{
+    content: '/';
+    font-weight: bold;
+    color: var(--magenta);
+    position: absolute;
+    left: 12vw;
+}
+
+/* Adiciona um pequeno padding a esquerda, reduz o tamanho para 85% e troca a cor do texto para magenta */
+.section3 .magenta{
+    padding-left: 1vw;
+    color: var(--magenta);
+    scale: calc(0.88);
+}
+
+/* Adiciona um efeito de traço ( - ) ao lado do elemento */
+.section3 .magenta::after{
+    content: '';
+    position: absolute;
+    top: calc(50%);
+    left: -22px;
+    width: 6px;
+    height: 2px;
+    background-color: var(--magenta);
 }
