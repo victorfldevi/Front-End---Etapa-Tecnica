@@ -129,6 +129,15 @@
     z-index: 2;
 }
 
+/* Cria o efeito de parallax com a imagem fornecida em --bg-parallax */
+.parallax{
+    background-image: var(--bg-parallax);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /* Controla a nav da página */
 .navigation{
     height: 13vh;
@@ -268,4 +277,9 @@
     width: 6px;
     height: 2px;
     background-color: var(--magenta);
+}
+
+/* Controla a seção 4 da página */
+.section4 {
+    height: 85vh;
 }
