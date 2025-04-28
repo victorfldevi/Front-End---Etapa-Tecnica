@@ -284,6 +284,7 @@
     height: 85vh;
 }
 
+/* Controla a seção 5 da página */
 .section5{
     height: 285vh;
     padding: 21vh 6vw;
@@ -294,6 +295,7 @@
     background: linear-gradient(to bottom, var(--black) 0%, var(--spanish-blue) 30%, var(--black) 100%);
 }
 
+/* Escurece o plano de fundo em gradiente */
 .section5::before{
     content: '';
     position: absolute;
@@ -304,11 +306,13 @@
     z-index: 0;
 }
 
+/* Traz as divs para frente, evitando serem escurecidas, ao mesmo tempo que removendo seu background */
 .section5 div{
     z-index: 1;
     background-color: transparent;
 }
 
+/* Padroniza o heading 1 da seção 5 e o traz para frente, evitando de ser escurecido */
 .section5 h1{
     color: var(--pastel-blue);
     font-size: var(--title-size);
@@ -316,6 +320,7 @@
     z-index: 1;
 }
 
+/* Padroniza o paragraph e o ajusta para melhor visualização e contraste */
 .section5 p{
     font-size: var(--accordion-section-size);
     font-family: 'Gotham HTF Book';
@@ -323,6 +328,7 @@
     text-align: justify;
 }
 
+/* Ajusta o tamanho e o plano de fundo dos botões de acordeão */
 .accordion-btn{
     width: 100%;
     padding: 3vh 0;
@@ -331,6 +337,7 @@
     background-color: transparent;
 }
 
+/* Padroniza e ajusta os títulos para melhor visualização */
 .accordion-btn h1{
     margin: 0;
     width: 50%;
@@ -340,6 +347,7 @@
     line-height: 5vh;
 }
 
+/* Adiciona uma linha a mais no último acordeão */
 .accordion-bottom-line{
     position: relative;
 }
@@ -354,6 +362,8 @@
     background-color: var(--davys-green);
 }
 
+
+/* Constrói um botão redondo com um elemento no meio fornecido pelo --btn-icon */
 .accordion-btn::after{
     content: var(--btn-icon);
     width: 9vw;
@@ -371,6 +381,8 @@
     color: var(--magenta);
 }
 
+
+/* Constrói o efeito de linha no topo do acordeão*/
 .accordion-bd{
     position: relative;
 }
@@ -385,11 +397,13 @@
     background-color: var(--davys-green);
 }
 
+/* Ajusta o footer para melhor visualização */
 .section5 .footer{
     padding: 30vh 0;
     text-align: center;
 }
 
+/* Padroniza o botão de contato */
 .section5 .contact-btn{
     margin-top: 8vh;
     width: 80%;
