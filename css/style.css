@@ -130,7 +130,7 @@
 
 /* Controla a nav da página */
 .navigation{
-    height: 11vh;
+    height: 13vh;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -159,8 +159,8 @@
 /* Controla a seção 1 da página */
 .section1{
     width: 100%;
-    height: 44vh;
-    padding: 5vw;
+    height: 43vh;
+    padding-left: 6vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -173,4 +173,20 @@
     font-size: var(--subtitle-size);
     font-family: var(--title-btn-font);
     z-index: 2;
+}
+
+.section2{
+    height: 33vh;
+    padding: 6vw;
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+}
+
+.section2 p{
+    color: var(--pastel-blue);
+    font-size: var(--section-size);
+    font-family: 'Roboto Light';
+    letter-spacing: 0.2vw;
+    line-height: 3vh;
 }
