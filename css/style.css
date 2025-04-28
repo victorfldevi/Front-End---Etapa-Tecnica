@@ -86,7 +86,7 @@
     background-image: var(--bg-image);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
 }
 
 /* Adiciona o efeito de degradê, do preto para o transparente, sobre o plano de fundo */
@@ -282,4 +282,121 @@
 /* Controla a seção 4 da página */
 .section4 {
     height: 85vh;
+}
+
+.section5{
+    height: 285vh;
+    padding: 21vh 6vw;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--black) 0%, var(--spanish-blue) 30%, var(--black) 100%);
+}
+
+.section5::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+}
+
+.section5 div{
+    z-index: 1;
+    background-color: transparent;
+}
+
+.section5 h1{
+    color: var(--pastel-blue);
+    font-size: var(--title-size);
+    font-family: var(--title-btn-font);
+    z-index: 1;
+}
+
+.section5 p{
+    font-size: var(--accordion-section-size);
+    font-family: 'Gotham HTF Book';
+    color: var(--silver-foil);
+    text-align: justify;
+}
+
+.accordion-btn{
+    width: 100%;
+    padding: 3vh 0;
+    position: relative;
+    text-align: start;
+    background-color: transparent;
+}
+
+.accordion-btn h1{
+    margin: 0;
+    width: 50%;
+    color: var(--pastel-blue);
+    font-size: var(--accordion-title-size);
+    font-family: var(--accordion-title-font);
+    line-height: 5vh;
+}
+
+.accordion-bottom-line{
+    position: relative;
+}
+
+.accordion-bottom-line::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--davys-green);
+}
+
+.accordion-btn::after{
+    content: var(--btn-icon);
+    width: 9vw;
+    height: 6vh;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Medium';
+    font-size: 30px;
+    top: 35%;
+    right: 1vw;
+    border: 3px solid var(--magenta);
+    border-radius: 40px;
+    color: var(--magenta);
+}
+
+.accordion-bd{
+    position: relative;
+}
+
+.accordion-bd::after{
+    content: '';
+    position: absolute;
+    top: 0vh;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--davys-green);
+}
+
+.section5 .footer{
+    padding: 30vh 0;
+    text-align: center;
+}
+
+.section5 .contact-btn{
+    margin-top: 8vh;
+    width: 80%;
+    height: 10vh;
+    color: var(--magenta);
+    font-size: var(--btn-contact-size);
+    font-family: var(--title-btn-font);
+    border: 3px solid var(--magenta);
+    background-color: transparent;
 }
