@@ -66,33 +66,17 @@
     
 }
 
-/* Ajusta a imagem do modal após atingir um tamanho lateral de 575 pixels */
-@media (max-width:575px){
-    .modal-dialog {
-        margin: 0 !important;
-        overflow: hidden;
-    }
-}
+::-webkit-scrollbar {
+    width: 5px;
+  }
 
-/* Aplicando mudanças para versão de computador */
-@media (min-width: 768px){
-
-    /* Modificando as variáveis para a versão de computador */
-    :root{
-
-        /* Definindo o tamanho das fontes na versão de computador */
-        --title-size: 80px;
-        --subtitle-size: 80px;
-        --section-size: 20px;
-        --accordion-title-size: 25px;
-        --accordion-section-size: 18px;
-        --caption-size: 16px;
-        --btn-contact-size: 30px;
-        --btn-scroll-size: 12px;
-        --list-size: 20px;
-        --sublist-size: 18px;
-    }
-}
+::-webkit-scrollbar-track {
+    background: rgba(237, 20, 91, 0.3);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--magenta);
+  }
 
 /* Ajusta o acordeão e é usado de base pelo botão de retorno */
 main {
@@ -156,6 +140,12 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.desktop-subtitle{
+    width: 0;
+    height: 0;
+    visibility:collapse;
 }
 
 /* Controla a nav da página */
@@ -290,7 +280,7 @@ main {
 }
 
 /* Adiciona efeito de barra ( / ) ao lado do elemento */
-.section3 .slash::after{
+.slash::after{
     content: '/';
     font-weight: bold;
     color: var(--magenta);
@@ -306,7 +296,7 @@ main {
 }
 
 /* Adiciona um efeito de traço ( - ) ao lado do elemento */
-.section3 .magenta::after{
+.magenta::after{
     content: '';
     position: absolute;
     top: calc(50%);
@@ -493,4 +483,129 @@ main {
 /* Adiciona efeito de brilho ao redor da borda circular */
 .return-btn:hover::after{
     box-shadow: 0 0 10px 5px var(--magenta);
+}
+
+/* Ajusta a imagem do modal após atingir um tamanho lateral de 575 pixels */
+@media (max-width:575px){
+    .modal-dialog {
+        margin: 0 !important;
+        overflow: hidden;
+    }
+}
+
+/* Aplicando mudanças para versão de computador */
+@media (min-width: 768px){
+
+    /* Modificando as variáveis para a versão de computador */
+    :root{
+
+        /* Definindo o tamanho das fontes na versão de computador */
+        --title-size: 80px;
+        --subtitle-size: 80px;
+        --section-size: 20px;
+        --accordion-title-size: 25px;
+        --accordion-section-size: 18px;
+        --caption-size: 16px;
+        --btn-contact-size: 30px;
+        --btn-scroll-size: 12px;
+        --list-size: 20px;
+        --sublist-size: 18px;
+    }
+
+    .navigation{
+        height: 7vh;
+    }
+
+    .section1{
+        padding-left: 12vmin;
+    }
+
+    .desktop-subtitle{
+        width: 38%;
+        height: auto;
+        padding-top: 1vh;
+        visibility:visible;
+        font-size: var(--list-size);
+        font-family: 'Roboto Light';
+        line-height: 2.5vh;
+        color: var(--pastel-blue);
+        z-index: 1;
+    }
+
+    .section2{
+        width: 0;
+        height: 0;
+        visibility: collapse;
+    }
+
+    .section3{
+        height: 105vh;
+    }
+
+    .section3 h1{
+        padding: 15vmin 0 5vmin;
+    }
+
+    .block-1{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .block-2{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .block-2 p{
+        text-align: justify;
+        line-height: 1.5rem;
+    }
+
+    .block-2 div img{
+        width: 100%;
+    }
+
+    .block-3{
+        width: 40%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .block-3 p{
+        padding-bottom: 2vh;
+        line-height: 2vh;
+    }
+
+    .block-3 li{
+        position: relative;
+    }
+
+    .block-3 li p {
+        width: 100%;
+        padding: 0.3vh 0;
+    }
+
+    .slash::after{
+        content: '/';
+        font-weight: bold;
+        color: var(--magenta);
+        position: absolute;
+        left: -2.5vmin;
+    }
+
+    .magenta::after{
+        content: '';
+        position: absolute;
+        top: calc(50%);
+        left: -6px;
+        width: 6px;
+        height: 2px;
+        background-color: var(--magenta);
+    }
 }
