@@ -8,11 +8,11 @@ function getScrollPercent() {
 function changeIcon(id){
     iconStyle = document.getElementById(id).style;
 
-    if(iconStyle.getPropertyValue("--btn-icon") == "'+'"){
-        iconStyle.setProperty("--btn-icon", "'—'");
+    if(iconStyle.getPropertyValue("--btn-icon") == "'✚'"){
+        iconStyle.setProperty("--btn-icon", "'―'");
     }
     else{
-        iconStyle.setProperty("--btn-icon", "'+'");
+        iconStyle.setProperty("--btn-icon", "'✚'");
     }
 }
 

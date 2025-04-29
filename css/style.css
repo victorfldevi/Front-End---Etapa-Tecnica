@@ -148,6 +148,12 @@ main {
     visibility:collapse;
 }
 
+.scroll-btn-title{
+    width: 0;
+    height: 0;
+    visibility:collapse;
+}
+
 /* Controla a nav da página */
 .navigation{
     height: 13vh;
@@ -458,7 +464,7 @@ main {
     animation: fadeIn 0.5s;
 }
 
-/* Cria o efeito de borda circular no botão de retorno e remove a cor de fundo */
+/* Cria o efeito de borda circular no botão e remove a cor de fundo */
 .return-btn {
     position: relative;
     background-color: transparent;
@@ -512,14 +518,22 @@ main {
         --sublist-size: 18px;
     }
 
-    .navigation{
-        height: 7vh;
+    .wireframe-text{
+        -webkit-text-stroke: 0.12rem var(--bd-color);
     }
 
+    /* Ajusta o tamanho da nav */
+    .navigation{
+        height: 8vh;
+    }
+
+    /* Adiciona mais padding esquerdo para a seção 1 */
     .section1{
+        height: 45vmax;
         padding-left: 12vmin;
     }
 
+    /* Mostra o subtiítulo próximo ao slogan da seção 1 */
     .desktop-subtitle{
         width: 38%;
         height: auto;
@@ -532,20 +546,72 @@ main {
         z-index: 1;
     }
 
+    .scroll-btn-div{
+        top: 85%;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .scroll-btn {
+        position: relative;
+        background-color: transparent;
+    }
+
+    .scroll-btn img{
+        width: 120%;
+    }
+    
+    .scroll-btn::after{
+        content: '';
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -17px;
+        right: -17px;
+        border: 2px solid var(--pastel-blue);
+        border-radius: 40px;
+        color: var(--pastel-blue);
+    }
+
+    .scroll-btn-title{
+        width: 100%;
+        height: auto;
+        visibility:visible;
+        right: 0%;
+        top: 75%;
+        padding: 0 2vmin 2vmin 0;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    .scroll-btn-title p{
+        font-family: 'Gotham HTF Book';
+        color: var(--pastel-blue);
+    }
+
+    /* Esconde a seção 2 por completo */
     .section2{
         width: 0;
         height: 0;
         visibility: collapse;
     }
 
+    /* Corrige o tamanho da seção 3 */
     .section3{
         height: 105vh;
     }
 
+    /* Ajusta o padding dos headings 1 da seção 3 */
     .section3 h1{
         padding: 15vmin 0 5vmin;
     }
 
+    /* Serve de container para o bloco a esquerda e a direita */
     .block-1{
         width: 100%;
         display: flex;
@@ -553,6 +619,7 @@ main {
         justify-content: space-around;
     }
 
+    /* Forma o modelo a esquerda da seção 3 */
     .block-2{
         width: 40%;
         display: flex;
@@ -560,15 +627,18 @@ main {
         align-items: end;
     }
 
+    /* Modifica o espaçamento entre caracteres do parágrafo para posicionamento adequado */
     .block-2 p{
         text-align: justify;
         line-height: 1.5rem;
     }
 
+    /* Ajusta a imagem para ocupar toda a div */
     .block-2 div img{
         width: 100%;
     }
 
+    /* Forma o modelo a direita da seção 3 */
     .block-3{
         width: 40%;
         height: 90%;
@@ -577,20 +647,24 @@ main {
         align-items: start;
     }
 
+    /* Modifica o padding de baixo e a altura de linha dos parágrafos */
     .block-3 p{
         padding-bottom: 2vh;
         line-height: 2vh;
     }
 
+    /* Prepara para receber pseudo-elementos */
     .block-3 li{
         position: relative;
     }
 
+    /* Ajusta os parágrafos da lista para tamanho e posicionamento adequado */
     .block-3 li p {
         width: 100%;
         padding: 0.3vh 0;
     }
 
+    /* Corrige o efeito de barra ( / ) para a versão desktop */
     .slash::after{
         content: '/';
         font-weight: bold;
@@ -599,6 +673,7 @@ main {
         left: -2.5vmin;
     }
 
+    /* Corrige o efeito de ( - ) para a versão de desktop */
     .magenta::after{
         content: '';
         position: absolute;
@@ -607,5 +682,49 @@ main {
         width: 6px;
         height: 2px;
         background-color: var(--magenta);
+    }
+
+    /* Ajusta o tamanho da seção 4 */
+    .section4{
+        height: 50vh;
+    }
+
+    .section5{
+        width: 100%;
+        height: 190vh;
+        margin: 0;
+        padding: 0;
+        background: radial-gradient(circle at 0% 20%, var(--spanish-blue) 0%, transparent 25%),
+                    radial-gradient(circle at 100% 30%, var(--spanish-blue) 0%, transparent 25%);
+    }
+
+    .section5 h1{
+        width: 100%;
+        padding: 21vh 6vw 5vh 6vw;
+    }
+
+    .accordion{
+        width: 80%;
+        align-items: center;
+    }
+
+    .accordion h1{
+        padding: 0;
+    }
+
+    .accordion-btn::after{
+        width: 50px;
+        height: 50px;
+        top: 30%;
+    }
+
+    .contact-btn{
+        margin-top: 4vh;
+        width: 42%;
+        height: 7vh;
+    }
+
+    .return-btn-div{
+        right: 6vw;
     }
 }
