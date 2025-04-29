@@ -20,6 +20,12 @@
 @font-face {font-family: 'Roboto Thin';src: url(../fonts/roboto/roboto-thin.ttf);}
 @font-face {font-family: 'Roboto Thin Italic';src: url(../fonts/roboto/roboto-thinItalic.ttf);}
 
+/* Cria uma animação básica de fade-in */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
 /* Padronizando todos os elementos */
 * {
     border: 0;
@@ -60,6 +66,14 @@
     
 }
 
+/* Ajusta a imagem do modal após atingir um tamanho lateral de 575 pixels */
+@media (max-width:575px){
+    .modal-dialog {
+        margin: 0 !important;
+        overflow: hidden;
+    }
+}
+
 /* Aplicando mudanças para versão de computador */
 @media (min-width: 768px){
 
@@ -80,8 +94,10 @@
     }
 }
 
+/* Ajusta o acordeão e é usado de base pelo botão de retorno */
 main {
     background-color: var(--black);
+    overflow:hidden;
 }
 
 /* Torna a imagem fornecida em --bg-image o novo fundo do container */
@@ -122,7 +138,7 @@ main {
 /* Torna o texto transparente e adiciona uma borda ao redor das letras da cor do --bd-color */
 .wireframe-text{
     color: transparent;
-    -webkit-text-stroke: 1.2px var(--bd-color);
+    -webkit-text-stroke: 0.08rem var(--bd-color);
     font-family: var(--fnt-family) !important;
 }
 
@@ -173,8 +189,8 @@ main {
 /* Controla a seção 1 da página */
 .section1{
     width: 100%;
-    height: 43vh;
-    padding: 0 6vw;
+    height: 38vmax;
+    padding-left: 6vmin;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -192,7 +208,7 @@ main {
 /* Controla a seção 2 da página */
 .section2{
     height: 30vh;
-    padding: 0 3vw 0 9vw;
+    padding: 0 9vw 0 6vw;
     display: flex;
     align-items: center;
     background-color: var(--black);
@@ -204,14 +220,14 @@ main {
     color: var(--pastel-blue);
     font-size: var(--section-size);
     font-family: 'Roboto Light';
-    letter-spacing: 0.2vw;
+    letter-spacing: 0.05rem;
     line-height: 3vh;
 }
 
 /* Controla a seção 3 da página */
 .section3{
-    height: 255vh;
-    padding: 0 2vw 0 9vw;
+    height: 250vh;
+    padding: 0 6vw;
     display: flex;
     flex-direction: column;
     background-color: var(--cultured);
@@ -219,7 +235,7 @@ main {
 
 /* Ajusta do heading 1 para ter a posição e fonte adequadas*/
 .section3 h1{
-    padding: 18vh 0 10vh;
+    padding: 25vmin 0 10vmin;
     font-size: var(--title-size);
     font-family: var(--title-btn-font);
 }
@@ -233,9 +249,26 @@ main {
     line-height: 3.3vh;
 }
 
-/* Ajusta a imagem para possuir o tamanho ideal */
+/* Ajusta a imagem do corpo para possuir o tamanho ideal */
 .section3 img{
     width: calc(100vmin - 18vw);
+}
+
+/* Ajusta a imagem do modal para possuir o tamanho ideal */
+.modal img{
+    width: 100%;
+}
+
+/* Ajusta o heading 1 do modal para a posição e padrões ideais */
+.modal h1{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 4vh;
+    right: 4vw;
+    font-size: var(--accordion-title-size);
+    font-style: var(--accordion-title-font);
+    color: var(--cultured);
 }
 
 /* Aplica ao componente small a cor, fonte e posicionamento adequados */
@@ -262,7 +295,7 @@ main {
     font-weight: bold;
     color: var(--magenta);
     position: absolute;
-    left: 12vw;
+    left: 8vmin;
 }
 
 /* Adiciona um pequeno padding a esquerda, reduz o tamanho para 85% e troca a cor do texto para magenta */
@@ -290,7 +323,7 @@ main {
 
 /* Controla a seção 5 da página */
 .section5{
-    height: 285vh;
+    height: 260vh;
     padding: 21vh 6vw;
     display: flex;
     position: relative;
@@ -370,8 +403,8 @@ main {
 /* Constrói um botão redondo com um elemento no meio fornecido pelo --btn-icon */
 .accordion-btn::after{
     content: var(--btn-icon);
-    width: 9vw;
-    height: 6vh;
+    width: 38px;
+    height: 38px;
     display: flex;
     position: absolute;
     justify-content: center;
@@ -408,15 +441,22 @@ main {
 }
 
 /* Padroniza o botão de contato */
-.section5 .contact-btn{
+.contact-btn{
     margin-top: 8vh;
-    width: 80%;
+    width: 85%;
     height: 10vh;
     color: var(--magenta);
     font-size: var(--btn-contact-size);
     font-family: var(--title-btn-font);
     border: 3px solid var(--magenta);
     background-color: transparent;
+    transition: 0.3s ease;
+}
+
+/* Cria um efeito de inversão de cores entre borda e preenchimento */
+.contact-btn:hover{
+    background-color: var(--magenta);
+    color: var(--black);
 }
 
 /* Cria uma div para conter e ajustar o botão de retorno custom */
@@ -425,6 +465,7 @@ main {
     bottom: 10vh;
     right: 10vw;
     z-index: 2;
+    animation: fadeIn 0.5s;
 }
 
 /* Cria o efeito de borda circular no botão de retorno e remove a cor de fundo */
@@ -443,7 +484,13 @@ main {
     position: absolute;
     top: -8px;
     right: -14px;
-    border: 1px solid var(--magenta);
+    border: 2px solid var(--magenta);
     border-radius: 40px;
     color: var(--magenta);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Adiciona efeito de brilho ao redor da borda circular */
+.return-btn:hover::after{
+    box-shadow: 0 0 10px 5px var(--magenta);
 }

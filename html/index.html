@@ -1,164 +1,208 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Importando arquivo de estilização style.css -->
-    <link rel="stylesheet" href="../css/style.css">
+  <!-- Importando arquivo de estilização style.css -->
+  <link rel="stylesheet" href="../css/style.css">
 
-    <!-- Importando bibliotecas CSS e JS do Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" 
+  <!-- Importando bibliotecas CSS e JS do Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
-    <title>Home</title>
-</head> 
+  <title>Home</title>
+</head>
+
 <body>
-  <main id="top">
     <!-- Mostra o logotipo da FIAP, junto a um fundo preto e um medidor de rolagem-->
     <nav class="sticky">
-        <div class="navigation">
-            <img src="../svg/logo.svg" alt="Imagem do logo da FIAP">
-            <div class="progress">
-                <div class="progress-bar progress-bar-custom" role="progressbar" aria-valuenow="50" id="progress-bar"
-                aria-valuemin="0" aria-valuemax="100">
-                </div>
-            </div>
+      <div class="navigation">
+        <img src="../svg/logo.svg" alt="Imagem do logo da FIAP">
+        <div class="progress">
+          <div class="progress-bar progress-bar-custom" role="progressbar" aria-valuenow="50" id="progress-bar"
+            aria-valuemin="0" aria-valuemax="100">
+          </div>
         </div>
+      </div>
     </nav>
     <!-- Seção com o slogan da FIAP e um plano de fundo inspirador -->
-    <header class="section1 background-img fade-effect" style="--bg-image: url(../imgs/header.jpg)">
+    <main id="top">
+      <header class="section1 background-img fade-effect" style="--bg-image: url(../imgs/header.jpg)">
         <h1 class="wireframe-text" style="--bd-color: #ED145B; --fnt-family: 'Gotham HTF Bold'">A MAIOR FACULDADE</h1>
         <h1 class="text-pastel-blue">DE TECNOLOGIA</h1>
-    </header>
+      </header>
     <!-- Seção com texto promocional da FIAP, com um fundo preto -->
-    <section class="section2">
-        <p>Referência em tecnologia e inovação no Brasil, a FIAP é uma faculdade que prepara profissionais para o futuro, 
-            com um ensino prático, professores atuantes no mercado e desafios reais que conectam os alunos às grandes empresas.</p>
-    </section>
+      <section class="section2">
+        <p>Referência em tecnologia e inovação no Brasil, a FIAP é uma faculdade que prepara profissionais para o futuro,
+          com um ensino prático, professores atuantes no mercado e desafios reais que conectam os alunos às grandes
+          empresas.</p>
+      </section>
     <!-- Seção com explicação do ecossistema e serviços fornecidos pela FIAP -->
-    <section class="section3">
+      <section class="section3">
         <h1>EDUCAÇÃO E TECH</h1>
         <p>A FIAP é muito mais do que uma faculdade de tecnologia, é um verdadeiro ecossistema de inovação e aprendizado.
-             Conhecida por sua abordagem moderna e focada no mercado, a instituição é referência quando se trata de formar profissionais
-              capacitados para os desafios do futuro. Seja na graduação, pós-graduação ou cursos livres, a FIAP entrega um ensino que 
-              mistura teoria e prática, preparando os alunos para atuar em empresas de ponta ou até mesmo empreender.</p>
-        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+          Conhecida por sua abordagem moderna e focada no mercado, a instituição é referência quando se trata de formar
+          profissionais
+          capacitados para os desafios do futuro. Seja na graduação, pós-graduação ou cursos livres, a FIAP entrega um
+          ensino que
+          mistura teoria e prática, preparando os alunos para atuar em empresas de ponta ou até mesmo empreender.</p>
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+          tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-body">
-              <img src="../imgs/fiap-next.jpg" alt="Imagem de um cartão do evento FIAP NEXT">
+            <div class="m-0">
+              <h1>╳</h1>
+              <div class="p-0">
+                <img src="../imgs/fiap-next.jpg" alt="Imagem de um cartão do evento FIAP NEXT">
+              </div>
             </div>
           </div>
         </div>
-        <img src="../imgs/fiap-next.jpg" alt="Imagem de um cartão do evento FIAP NEXT" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
-        <small>Figura 1 - Logotipo da FIAP NEXT</small>
-        <p>Com um corpo docente formado por profissionais atuantes no mercado, a FIAP não ensina apenas tecnologia, mas também negócios,
-             inovação e liderança. Seus cursos abrangem diversas áreas, incluindo:</p>
+        <div class="d-flex justify-content-center align-items-center">
+          <div class=" d-flex justify-content-center flex-column">
+            <img src="../imgs/fiap-next.jpg" alt="Imagem de um cartão do evento FIAP NEXT"
+              data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
+            <small>Figura 1 - Logotipo da FIAP NEXT</small>
+          </div>
+        </div>
+        <p class="m-0">Com um corpo docente formado por profissionais atuantes no mercado, a FIAP não ensina apenas tecnologia, mas
+          também negócios,
+          inovação e liderança. Seus cursos abrangem diversas áreas, incluindo:</p>
         <ul>
-            <li>
-                <p class="slash">Tecnologia e Desenvolvimento</p>
-                <p class="magenta">Desenvolvimento de Software</p>
-                <p class="magenta">Inteligência Artificial</p>
-                <p class="magenta">Data</p>
-                <p class="magenta">Cibersegurança</p>
-                <p class="slash">UX/UI, Marketing Digital</p>
-                <p class="slash">Metodologias e Gestão</p>
-            </li>
+          <li>
+            <p class="slash">Tecnologia e Desenvolvimento</p>
+            <p class="magenta">Desenvolvimento de Software</p>
+            <p class="magenta">Inteligência Artificial</p>
+            <p class="magenta">Data</p>
+            <p class="magenta">Cibersegurança</p>
+            <p class="slash">UX/UI, Marketing Digital</p>
+            <p class="slash">Metodologias e Gestão</p>
+          </li>
         </ul>
-        <p>Além disso, a instituição incentiva fortemente o uso dessas metodologias e outras abordagens inovadoras que fazem parte do dia 
-            a dia de grandes empresas.</p>
+        <p>Além disso, a instituição incentiva fortemente o uso dessas metodologias e outras abordagens inovadoras que
+          fazem parte do dia
+          a dia de grandes empresas.</p>
         <button href="#"></button>
-    </section>
-    <!-- Seção para separação de blocos com imagem de fundo em paralax -->
-    <section class="section4 parallax" style="--bg-parallax:url('../imgs/break-image.jpg')"></section>
-    <!-- Seção com explicações de valores e metodologias da FIAP, incluindo blocos acordeões separando o conteúdo e botão de contato -->
-    <section class="section5">
+      </section>
+      <!-- Seção para separação de blocos com imagem de fundo em paralax -->
+      <section class="section4 parallax" style="--bg-parallax:url('../imgs/break-image.jpg')"></section>
+      <!-- Seção com explicações de valores e metodologias da FIAP, incluindo blocos acordeões separando o conteúdo e botão de contato -->
+      <section class="section5">
         <h1 class="mb-3">NOSSA ESTRUTURA</h1>
 
-        <div class="accordion accordion-flush mt-5" id="accordionExample">
-            <div class="accordion-bd">
-              <h1 class="accordion-header">
-                <button class="accordion-btn collapsed" style="--btn-icon: '+'" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <h1>CONEXÃO O MERCADO DE TRABALHO</h1>
-                </button>
-              </h1>
-              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body p-0">
-                  <p>A FIAP se destaca não apenas pelo seu ensino inovador, mas também pela forma como conecta seus alunos ao mercado de 
-                    trabalho. A instituição tem parcerias com algumas das maiores empresas de tecnologia do mundo, permitindo que seus 
-                    estudantes participem de desafios reais, hackathons e programas de mentoria. Dessa forma, além de adquirirem 
-                    conhecimento teórico e prático, os alunos têm a chance de desenvolver networking e garantir oportunidades de estágio e 
-                    emprego ainda durante o curso. A FIAP compreende que o aprendizado vai além da sala de aula, por isso incentiva 
-                    projetos interdisciplinares que desafiam a criatividade e a capacidade de resolução de problemas dos futuros 
-                    profissionais.</p>
-                </div>
+        <div class="accordion accordion-flush mt-5 w-100" id="accordionExample">
+          <div class="accordion-bd">
+            <h1 class="accordion-header">
+              <button class="accordion-btn collapsed" style="--btn-icon: '+'" type="button" onclick="changeIcon('acOne')" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="acOne">
+                <h1>CONEXÃO O MERCADO DE TRABALHO</h1>
+              </button>
+            </h1>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body p-0">
+                <p>A FIAP se destaca não apenas pelo seu ensino inovador, mas também pela forma como conecta seus alunos
+                  ao mercado de
+                  trabalho. A instituição tem parcerias com algumas das maiores empresas de tecnologia do mundo,
+                  permitindo que seus
+                  estudantes participem de desafios reais, hackathons e programas de mentoria. Dessa forma, além de
+                  adquirirem
+                  conhecimento teórico e prático, os alunos têm a chance de desenvolver networking e garantir
+                  oportunidades de estágio e
+                  emprego ainda durante o curso. A FIAP compreende que o aprendizado vai além da sala de aula, por isso
+                  incentiva
+                  projetos interdisciplinares que desafiam a criatividade e a capacidade de resolução de problemas dos
+                  futuros
+                  profissionais.</p>
               </div>
             </div>
-            <div class="accordion-bd">
-              <h1 class="accordion-header">
-                <button class="accordion-btn collapsed" style="--btn-icon: '+'" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <h1>APRENDIZADO IMERSIVO</h1>
-                </button>
-              </h1>
-              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body p-0">
-                  <p>Outro diferencial da FIAP é a sua estrutura moderna, pensada para proporcionar uma experiência de aprendizado imersiva e
-                     dinâmica. Os laboratórios contam com equipamentos de ponta e softwares atualizados, permitindo que os alunos 
-                     experimentem na prática as tecnologias que usarão no mercado de trabalho. Além disso, os espaços colaborativos são 
-                     projetados para estimular o trabalho em equipe, um fator essencial para profissionais da área de tecnologia. O ambiente 
-                     acadêmico da FIAP reflete a realidade das grandes empresas do setor, preparando os alunos para os desafios que 
-                     enfrentarão ao longo de sua carreira.</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-bd">
-              <h1 class="accordion-header">
-                <button class="accordion-btn collapsed" style="--btn-icon: '+'" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <h1>ENSINO PERSONALIZADO</h1>
-                </button>
-              </h1>
-              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body p-0">
-                  <p>A instituição também aposta na personalização de ensino. oferecendo cursos e trilhas de aprendizado que se adaptam aos 
-                    diferentes perfis de profissionais. Seja para quem deseja seguir carreira no desenvolvimento de software, na ciência de 
-                    dados, na segurança cibernética ou até mesmo no empreendedorismo digital, a FIAP possui um programa que atende às 
-                    necessidades do mercado e às aspirações dos estudantes. Além disso, os cursos são atualizados constantemente para 
-                    acompanhar as inovações tecnológicas, garantindo que os alunos sempre tenham acesso ao que há de mais recente no setor.</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-bd pb-1 accordion-bottom-line">
-                <h1 class="accordion-header">
-                  <button class="accordion-btn collapsed" style="--btn-icon: '+'" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    <h1>INOVAÇÃO E TRANSFORMAÇÃO</h1>
-                  </button>
-                </h1>
-                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body p-0">
-                    <p>Por fim, a FIAP se destaca pelo seu compromisso com a inovação e a transformação digital. A faculdade não apenas ensina 
-                      tecnologia, mas a utiliza para melhorar a experiência de aprendizado, com plataformas interativas, inteligência 
-                      artificial aplicada no ensino e metodologias ativas que engajam os alunos. Seu foco é formar profissionais completos, 
-                      que não apenas dominam ferramentas e linguagens de programação, mas também sabem resolver problemas, inovar e liderar. 
-                      Seja para quem busca uma primeira formação ou para profissionais que desejam se atualizar. a FIAP se consolidou como 
-                      uma das melhores instituições do Brasil para quem quer construir uma carreira de sucesso na tecnologia.</p>
-                  </div>
-                </div>
-              </div>
           </div>
-          <div class="footer">
-            <h1>QUER SABER MAIS?</h1>
-            <button class="contact-btn">ENTRE EM CONTATO</button>
+          <div class="accordion-bd">
+            <h1 class="accordion-header">
+              <button class="accordion-btn collapsed" style="--btn-icon: '+'" type="button" onclick="changeIcon('acTwo')" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="acTwo">
+                <h1>APRENDIZADO IMERSIVO</h1>
+              </button>
+            </h1>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body p-0">
+                <p>Outro diferencial da FIAP é a sua estrutura moderna, pensada para proporcionar uma experiência de
+                  aprendizado imersiva e
+                  dinâmica. Os laboratórios contam com equipamentos de ponta e softwares atualizados, permitindo que os
+                  alunos
+                  experimentem na prática as tecnologias que usarão no mercado de trabalho. Além disso, os espaços
+                  colaborativos são
+                  projetados para estimular o trabalho em equipe, um fator essencial para profissionais da área de
+                  tecnologia. O ambiente
+                  acadêmico da FIAP reflete a realidade das grandes empresas do setor, preparando os alunos para os
+                  desafios que
+                  enfrentarão ao longo de sua carreira.</p>
+              </div>
+            </div>
           </div>
-    </section>
-    <div class="return-btn-div">
+          <div class="accordion-bd">
+            <h1 class="accordion-header">
+              <button class="accordion-btn collapsed" style="--btn-icon: '+'" type="button" onclick="changeIcon('acThree')" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="acThree">
+                <h1>ENSINO PERSONALIZADO</h1>
+              </button>
+            </h1>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body p-0">
+                <p>A instituição também aposta na personalização de ensino. oferecendo cursos e trilhas de aprendizado que
+                  se adaptam aos
+                  diferentes perfis de profissionais. Seja para quem deseja seguir carreira no desenvolvimento de
+                  software, na ciência de
+                  dados, na segurança cibernética ou até mesmo no empreendedorismo digital, a FIAP possui um programa que
+                  atende às
+                  necessidades do mercado e às aspirações dos estudantes. Além disso, os cursos são atualizados
+                  constantemente para
+                  acompanhar as inovações tecnológicas, garantindo que os alunos sempre tenham acesso ao que há de mais
+                  recente no setor.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-bd pb-1 accordion-bottom-line">
+            <h1 class="accordion-header">
+              <button class="accordion-btn collapsed" style="--btn-icon: '+'" type="button" onclick="changeIcon('acFour')" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" id="acFour">
+                <h1>INOVAÇÃO E TRANSFORMAÇÃO</h1>
+              </button>
+            </h1>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body p-0">
+                <p>Por fim, a FIAP se destaca pelo seu compromisso com a inovação e a transformação digital. A faculdade
+                  não apenas ensina
+                  tecnologia, mas a utiliza para melhorar a experiência de aprendizado, com plataformas interativas,
+                  inteligência
+                  artificial aplicada no ensino e metodologias ativas que engajam os alunos. Seu foco é formar
+                  profissionais completos,
+                  que não apenas dominam ferramentas e linguagens de programação, mas também sabem resolver problemas,
+                  inovar e liderar.
+                  Seja para quem busca uma primeira formação ou para profissionais que desejam se atualizar. a FIAP se
+                  consolidou como
+                  uma das melhores instituições do Brasil para quem quer construir uma carreira de sucesso na tecnologia.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <h1>QUER SABER MAIS?</h1>
+          <button class="contact-btn">ENTRE EM CONTATO</button>
+        </div>
+      </section>
+    <div class="return-btn-div" id="return-btn">
       <a class="return-btn" href="#top"><img src="../svg/scroll-up-arrow.svg" alt=""></a>
     </div>
   </main>
 
-    <script src="../js/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <script src="../js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
