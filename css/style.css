@@ -24,7 +24,12 @@
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
-  }
+}
+
+@keyframes fromLeft{
+    0% {transform: translateX(-3vw);}
+    100% {transform: translateX(0);}
+}
 
 /* Padronizando todos os elementos */
 * {
@@ -66,6 +71,7 @@
     
 }
 
+/* Altera as cores e grossura da scrollbar */
 ::-webkit-scrollbar {
     width: 5px;
   }
@@ -142,12 +148,36 @@ main {
     background-size: cover;
 }
 
+/* Adiciona a imagem de cursor fornecida em --hv-icon */
+.hoverIcon:hover{
+    cursor: var(--hv-icon), auto;
+}
+
+/* Ajusta o modal para imagem ocupar toda a largura da página */
+.modal {
+    --bs-modal-width: 100% !important;
+}
+
+/* Remove margins e paddings, e previne criação de tamanho extra no modal */
+.modal-dialog {
+    margin: 0 !important;
+    width: 100% !important;
+    overflow: hidden;
+}
+
+/* Ajusta o tamanho do modal */
+.modal-dialog div{
+    width: 100%;
+}
+
+/* Esconde o subtítulo voltado para desktop */
 .desktop-subtitle{
     width: 0;
     height: 0;
     visibility:collapse;
 }
 
+/* Esconde o botão scroll voltado para desktop */
 .scroll-btn-title{
     width: 0;
     height: 0;
@@ -199,6 +229,29 @@ main {
     font-size: var(--subtitle-size);
     font-family: var(--title-btn-font);
     z-index: 0;
+}
+
+.header-h1-first{
+    opacity: 0;
+    animation: fromLeft 0.6s ease-out, fadeIn 0.6s ease-out;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+
+.header-h1-second{
+    opacity: 0;
+    animation: fromLeft 0.6s ease-out, fadeIn 0.6s ease-out;
+    animation-delay: 0.15s;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+
+.header-h1-third{
+    opacity: 0;
+    animation: fromLeft 0.6s ease-out, fadeIn 0.6s ease-out;
+    animation-delay: 0.3s;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
 }
 
 /* Controla a seção 2 da página */
@@ -291,7 +344,7 @@ main {
     font-weight: bold;
     color: var(--magenta);
     position: absolute;
-    left: 8vmin;
+    left: 7%;
 }
 
 /* Adiciona um pequeno padding a esquerda, reduz o tamanho para 85% e troca a cor do texto para magenta */
@@ -343,6 +396,11 @@ main {
 .section5 div{
     z-index: 1;
     background-color: transparent;
+}
+
+/* Ajusta o tamaho do acordeão */
+.section5 .accordion{
+    width: 100%;
 }
 
 /* Padroniza o heading 1 da seção 5 e o traz para frente, evitando de ser escurecido */
@@ -491,16 +549,26 @@ main {
     box-shadow: 0 0 10px 5px var(--magenta);
 }
 
-/* Ajusta a imagem do modal após atingir um tamanho lateral de 575 pixels */
-@media (max-width:575px){
-    .modal-dialog {
-        margin: 0 !important;
-        overflow: hidden;
+/* Ajusta o modal para imagem não escalonar além do ideal */
+@media (min-width: 600px) {
+    .modal {
+        --bs-modal-width: 100vmin !important;
+    }
+
+    .modal-dialog{
+        margin: auto !important;
+    }
+
+    .modal h1{
+        position: absolute;
+        padding: 0 !important;
+        top: 4vmin;
+        right: 4vmin;
     }
 }
 
 /* Aplicando mudanças para versão de computador */
-@media (min-width: 768px){
+@media (min-width: 1024px){
 
     /* Modificando as variáveis para a versão de computador */
     :root{
@@ -518,6 +586,7 @@ main {
         --sublist-size: 18px;
     }
 
+    /* Aumenta a borda do título principal */
     .wireframe-text{
         -webkit-text-stroke: 0.12rem var(--bd-color);
     }
@@ -533,6 +602,11 @@ main {
         padding-left: 12vmin;
     }
 
+    /* Ajusta o tamanho do acordeão */
+    .section5 .accordion{
+        width: 76%;
+    }
+
     /* Mostra o subtiítulo próximo ao slogan da seção 1 */
     .desktop-subtitle{
         width: 38%;
@@ -546,19 +620,22 @@ main {
         z-index: 1;
     }
 
+    /* Alinha a imagem do botão de scroll com o seu respectivo efeito */
     .scroll-btn-div{
         top: 85%;
         position: absolute;
         z-index: 2;
     }
 
+    /* Ajusta as proporções da imagem do botão */
+    .scroll-btn img{
+        width: 120%;
+    }
+
+    /* Cria um efeito circular ao redor do botão de scroll */
     .scroll-btn {
         position: relative;
         background-color: transparent;
-    }
-
-    .scroll-btn img{
-        width: 120%;
     }
     
     .scroll-btn::after{
@@ -576,6 +653,7 @@ main {
         color: var(--pastel-blue);
     }
 
+    /* Ajusta a div do botão de scroll para a posição e tamanho ideais */
     .scroll-btn-title{
         width: 100%;
         height: auto;
@@ -589,6 +667,7 @@ main {
         z-index: 1;
     }
 
+    /* Altera a fonte e a cor do titulo do botão de scroll */
     .scroll-btn-title p{
         font-family: 'Gotham HTF Book';
         color: var(--pastel-blue);
@@ -603,7 +682,7 @@ main {
 
     /* Corrige o tamanho da seção 3 */
     .section3{
-        height: 105vh;
+        height: 130vh;
     }
 
     /* Ajusta o padding dos headings 1 da seção 3 */
@@ -630,7 +709,7 @@ main {
     /* Modifica o espaçamento entre caracteres do parágrafo para posicionamento adequado */
     .block-2 p{
         text-align: justify;
-        line-height: 1.5rem;
+        line-height: 3vh;
     }
 
     /* Ajusta a imagem para ocupar toda a div */
@@ -650,7 +729,7 @@ main {
     /* Modifica o padding de baixo e a altura de linha dos parágrafos */
     .block-3 p{
         padding-bottom: 2vh;
-        line-height: 2vh;
+        line-height: 3vh;
     }
 
     /* Prepara para receber pseudo-elementos */
@@ -689,6 +768,7 @@ main {
         height: 50vh;
     }
 
+    /* Ajusta o tamanho da seção 5 e troca seu plano de fundo */
     .section5{
         width: 100%;
         height: 190vh;
@@ -698,32 +778,43 @@ main {
                     radial-gradient(circle at 100% 30%, var(--spanish-blue) 0%, transparent 25%);
     }
 
+    /* Ajusta o tamanho e o padding do heading 1 na seção 5 */
     .section5 h1{
         width: 100%;
         padding: 21vh 6vw 5vh 6vw;
     }
 
+    /* Faz com que o acordeão não mais ocupe toda a pagina, e mantenha seus elementos ao centro */
     .accordion{
         width: 80%;
         align-items: center;
     }
 
+    /* Remove o padding do heading 1 do acordeão */
     .accordion h1{
         padding: 0;
     }
 
+    /* Remove a margin do heading 1 do botão do acordeão */
+    .accordion-btn h1{
+        margin: 0;
+    }
+
+    /* Ajusta o efeito circular com um símbolo no botão do acordeão para desktop */
     .accordion-btn::after{
         width: 50px;
         height: 50px;
-        top: 30%;
+        top: 0;
     }
 
+    /* Ajusta o botão de contatos para desktop */
     .contact-btn{
         margin-top: 4vh;
         width: 42%;
         height: 7vh;
     }
 
+    /* Ajusta o botão de retorno para desktop */
     .return-btn-div{
         right: 6vw;
     }
