@@ -455,7 +455,7 @@ main {
 
 
 /* Constrói um botão redondo com um elemento no meio fornecido pelo --btn-icon */
-.accordion-btn::after{
+.accordion-btn h1::after{
     content: var(--btn-icon);
     width: 38px;
     height: 38px;
@@ -465,7 +465,7 @@ main {
     align-items: center;
     font-family: 'Roboto Medium';
     font-size: 30px;
-    top: 35%;
+    top: 30%;
     right: 1vw;
     border: 3px solid var(--magenta);
     border-radius: 40px;
@@ -481,7 +481,7 @@ main {
 .accordion-bd::after{
     content: '';
     position: absolute;
-    top: 0vh;
+    top: 0;
     left: 0;
     width: 100%;
     height: 2px;
@@ -793,6 +793,12 @@ main {
     /* Remove o padding do heading 1 do acordeão */
     .accordion h1{
         padding: 0;
+    }
+
+    .accordion-header{
+        display: flex !important;
+        justify-content: center !important;
+        flex-direction: column ;
     }
 
     /* Remove a margin do heading 1 do botão do acordeão */
