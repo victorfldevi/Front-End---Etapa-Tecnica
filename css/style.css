@@ -593,7 +593,7 @@ main {
 
     /* Ajusta o tamanho da nav */
     .navigation{
-        height: 8vh;
+        height: 10vh;
     }
 
     /* Adiciona mais padding esquerdo para a seção 1 */
@@ -607,7 +607,7 @@ main {
         width: 76%;
     }
 
-    /* Mostra o subtiítulo próximo ao slogan da seção 1 */
+    /* Mostra o subtítulo próximo ao slogan da seção 1 */
     .desktop-subtitle{
         width: 38%;
         height: auto;
@@ -615,7 +615,7 @@ main {
         visibility:visible;
         font-size: var(--list-size);
         font-family: 'Roboto Light';
-        line-height: 2.5vh;
+        line-height: 3vh;
         color: var(--pastel-blue);
         z-index: 1;
     }
@@ -655,6 +655,7 @@ main {
 
     /* Ajusta a div do botão de scroll para a posição e tamanho ideais */
     .scroll-btn-title{
+        opacity: 0;
         width: 100%;
         height: auto;
         visibility:visible;
@@ -665,6 +666,8 @@ main {
         position: absolute;
         justify-content: center;
         z-index: 1;
+        animation: fadeIn 0.6s forwards;
+        animation-delay: 0.8s;
     }
 
     /* Altera a fonte e a cor do titulo do botão de scroll */
@@ -817,7 +820,7 @@ main {
     .contact-btn{
         margin-top: 4vh;
         width: 42%;
-        height: 7vh;
+        height: 8vh;
     }
 
     /* Ajusta o botão de retorno para desktop */
